@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading</title>
+</head>
+<style>
+  
+    #wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 80vh;
+  margin: 0 auto;
+}
+
+#wrapper img {
+  margin-bottom: 100px;
+}
+
+
+@keyframes scale {
+ 0% {transform: scale(0.5);opacity:0;}
+ 50% {transform: scale(1);opacity:1;}
+ 100% {transform: scale(0.5);opacity:0;}
+}
+
+#wrapper img {
+  width: 100px;
+  animation: scale 2s ease infinite;
+  transform-origin: 50% 50%;
+}
+
+#cart-block{
+  position:relative;
+  width:90px;
+}
+
+#cart-body {
+  border-top: 50px solid #3c1e9b;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 50px;
+}
+
+#cart-body:after{
+  content: "";
+  position:absolute;
+  border: 0 solid transparent;
+  border-top: 8px solid #3c1e9b;
+  border-left: 8px solid #3c1e9b;
+  width: 10px;
+  height: 10px;
+  top:-10px;
+  right:-12px;
+  transform: rotate(30deg);
+  border-radius:5px;
+}
+
+#cart-body:before{
+  position:absolute;
+  content:"";
+  border-top: 30px solid white;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  height: 0;
+  width: 40px;
+  top:10px;
+  left:10px;
+}
+
+#cart-wheel1{
+  position:relative;
+  width:20px;
+  height:20px;
+  border-radius:100%;
+  border:3px solid #3c1e9b;
+  background:rgba(0,0,0,0);
+  top:1px;
+  left:15px;
+  animation: rotation 0.5s linear infinite;
+}
+
+#cart-wheel1:after{
+  content:"";
+  position:absolute;
+  width:20px;
+  height:3px;
+  background-color:#3c1e9b;
+  top:8px;
+}
+
+#cart-wheel1:before{
+  content:"";
+  position:absolute;
+  width:3px;
+  height:20px;
+  background-color:#3c1e9b;
+  left:8px;
+}
+
+#cart-wheel2{
+  position:relative;
+  width:20px;
+  height:20px;
+  border-radius:100%;
+  border:3px solid #3c1e9b;
+  background:rgba(0,0,0,0);
+  top:-25px;
+  left:45px;
+  animation: rotation 0.5s linear infinite;
+}
+
+#cart-wheel2:after{
+  content:"";
+  position:absolute;
+  width:20px;
+  height:3px;
+  background-color:#3c1e9b;
+  top:8px;
+}
+
+#cart-wheel2:before{
+  content:"";
+  position:absolute;
+  width:3px;
+  height:20px;
+  background-color:#3c1e9b;
+  left:8px;
+}
+
+@keyframes rotation {
+ from {transform: rotate(0deg);}
+ to {transform: rotate(360deg);}
+}
+
+
+@keyframes animationFrames {
+  0% {
+    opacity:0;
+    transform:  translate(0px,-100px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@keyframes breathing {
+  -20% {
+    opacity:0;
+    -webkit-transform:  translate(0px,-25px)  ;
+  }
+  -10% {
+    opacity:1;
+    -webkit-transform:  translate(0px,0px)  ;
+  }
+  
+  0% {
+    -webkit-transform:scale(0.9);
+    -ms-transform:scale(0.9);
+    transform:scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform:   scale(0.9) ;
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+
+.element-animation{
+  animation: animationFrames ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: animationFrames ease 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: animationFrames ease 1s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: animationFrames ease 1s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 50%;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: animationFrames ease 1s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 50%;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@keyframes animationFrames{
+  0% {
+    opacity:0;
+    transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    opacity:0;
+    -moz-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -moz-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+ 
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -o-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -o-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -ms-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -ms-transform:  translate(0px,0px)  ;
+  }
+}
+#text{
+    font-size: 20px;
+}
+</style>
+<body>
+        <div id="wrapper">
+  <div id="cart-block">
+    <div id="cart-body"> </div>
+    <div id="cart-wheel1"> </div>
+    <div id="cart-wheel2"> </div>
+  </div>
+  <div class="typing-animation" id="text"></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Simulate loading animation for 5 seconds
+    setTimeout(function() {
+      // Redirect to the main HTML file after 5 seconds
+      window.location.href = "index.html";
+    }, 4000); // 5000 milliseconds = 5 seconds
+  });
+    const textElement = document.getElementById('text');
+    let textType =" enjoy to shoppping ";
+    let index = 0;
+    let direction = 1;
+    let fontSize = 30; //size ng ano ko
+
+    function typing() {
+        if(index <= textType.length && index >= 0){
+            textElement.textContent = textType.slice(0, index);
+            textElement.style.fontSize = fontSize + "px"; // Set the font size
+            index += direction;
+           // if(index >= textType.length || index <= 0){  
+           // direction *= -1;
+           // index += direction;
+        }
+    setTimeout(typing, 100);
+    }
+    
+    typing();
+</script>
+</body>
+</html>
