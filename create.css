@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    background:  rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 17px;
+}
+.img{
+    width: 190px ;
+    animation: float 5s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% {
+      /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+      transform: translatey(0px);
+    }
+    50% {
+      /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+      transform: translatey(-20px);
+    }
+    100% {
+      /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+      transform: translatey(0px);
+    }
+  }
+.qoute{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    margin: 0;
+}
+#login{
+    width: 380px;
+    height: 350px;
+    margin:30px auto;
+    box-shadow: 0 0 5px 3px rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+}
+input{
+    display: block;
+    width: 95%;
+    outline: none;
+    padding: 11px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 254, 253);
+    background: rgb(253, 251, 250) ;
+    box-shadow: 0 0 5px 3px rgb(255, 249, 249);
+    color: rgb(10, 9, 9);
+    margin-top: 13px;
+}
+/**.fa-eye{
+    margin-left: 280px;
+    margin-bottom: -800px;
+    cursor: pointer;
+    font-size: 30px;
+    color: aqua;
+}
+**/
+#btnLogin{
+    width: 98%;
+    display: block;
+    margin-top: 15px;
+    padding: 15px 0;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #1877f2;
+    cursor: pointer;
+    text-decoration-line: none;
+}
+#forget{
+    margin: 15px 0;
+    display: block;
+    font-family: arial;
+    text-decoration: none;
+    color: #000000;
+    font-size: 14px;
+}
+.forget:hover{
+ text-decoration: underline;
+}
+hr{
+ margin: 25px 0;
+ opacity: o.3;
+}
+#btn-create{
+   margin: 15px auto;
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background: #42b72a;
+    cursor: pointer;
+}
+/******FORGOT THE PASSWORD *******/
+#login-forget{
+    width: 380px;
+    height: 350px;
+    margin:30px auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+/*******CREATE ACCOUNT**********/
+#create{
+    width: 380px;
+    height: 350px;
+    margin:30px auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+@media screen and (max-width:920px){
+   .img{
+    width: 120px;
+    height: 100px;
+   }     
+   #login{
+    width: 330px;
+    margin: 30px auto;
+   }
+   #login-forget{
+    width: 330px;
+    margin: 30px auto;
+   }
+   #create{
+    width: 330px;
+    margin: 30px auto;
+   }
+}
