@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Password must be at least 8 characters and include at least one uppercase letter, one lowercase letter, and one digit.");
         return; // Stop execution if validation fails
     }
-    
+    let data = { username, firstName, lastName, email, password };
       // Display success message
      // alert("Form submitted successfully!");
+     /*
      Swal.fire({
         icon: 'success',
         title: 'Form Submitted!',
@@ -30,9 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         timer: 3000, //  (3 seconds)
         showConfirmButton: true 
       });
+      */
       // Redirect to the login page after form submission
+      /*
       setTimeout(function () {
       window.location.href = "index.html"; // Replace "login.html" with your login page's URL
-    }, 3000); // Redirect after 3 seconds
+    }, 3000);
+    */// Redirect after 3 seconds
     });
   });
