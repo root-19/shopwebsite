@@ -7,6 +7,38 @@ document.addEventListener("DOMContentLoaded", function() {
     localStorage.setItem("username", username);
   }
 
+//////////////////////Auth///////////////
+
+     const makePostRequest = async (data, endpoint, callback) => {
+
+	const sent = await fetch(endpoint, {
+		method: 'POST',
+        headers: {
+        	'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    try {
+    	const response = await sent.json()
+        callback(response)
+    } catch (error) {
+        console.log(error)
+        callback(error)
+    }
+}
+let token = localStorage.getItem('token');
+     if(token) {
+       makePostRequest({
+         token
+       }, "https://nodejs-1.wasieacuna.repl.co/api/verify-token", (msg) => {
+         if(msg.code !== 200) {
+           window.location.href = '/login.html'
+         }
+       })
+     } else {
+       window.location.href = '/login.html'
+     }
+
  ////////////////////////////////////////////
 var shoppingCart = (function () {
 

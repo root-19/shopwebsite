@@ -22,7 +22,7 @@
         <input type="password" name="password" autocomplete="current-password" required="" id="id_password" placeholder="Password">
         <i class="fas fa-eye toggle-password"></i>
         </div>
-       <a onclick="bntLogin()" id="btnLogin">Log in</a>
+       <a onclick="btnLogin()" id="btnLogin">Log in</a>
        <a id="forget" href="">forget your password</a>
        <hr/>
       <a id="btn-create" href="createACCOUNT.html">Create new account</a>
@@ -41,16 +41,38 @@ document.querySelector('.toggle-password').addEventListener('click', function ()
         passwordInput.type = 'password';
       }
     });
+    const makePostRequest = async (data, endpoint, callback) => {
+
+
+
+	const sent = await fetch(endpoint, {
+		method: 'POST',
+        headers: {
+        	'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    try {
+    	const response = await sent.json()
+        callback(response)
+    } catch (error) {
+        console.log(error)
+        callback(error)
+    }
+}
 
         function btnLogin() {
     var username = document.getElementsByName('username')[0].value;
     var password = document.getElementsByName('password')[0].value;
-
-    if(username === "" && password === ""){
-        window.location.href = 'loading.html';
-    } else {
-        alert('invalid password')
-    }  
+           makePostRequest( { username, password }, 'https://nodejs-1.wasieacuna.repl.co/api/login', (msg) => {
+             if(msg.code === 200) {
+               alert("Logged in success!");
+               localStorage.setItem('token', msg.token)
+               window.location.href='/';
+             } else {
+               alert('Login failed')
+             }
+           })
         };
        </script>
        </body>
