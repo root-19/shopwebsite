@@ -107,7 +107,7 @@ hr{
     padding: 15px;
 }
 /*******CREATE ACCOUNT**********/
-#registrationForm{
+#create{
     width: 380px;
     height: 350px;
     margin:30px auto;
@@ -127,7 +127,7 @@ hr{
     width: 330px;
     margin: 30px auto;
    }
-   #registrationForm{
+   #create{
     width: 330px;
     margin: 30px auto;
    }
