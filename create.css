@@ -27,7 +27,7 @@ body{
     font-weight: normal;
     margin: 0;
 }
-#login{
+#registrationForm{
     width: 380px;
     height: 350px;
     margin:30px auto;
@@ -56,7 +56,7 @@ input{
     color: aqua;
 }
 
-#btnLogin{
+#btnCreate{
     width: 98%;
     display: block;
     margin-top: 15px;
@@ -79,7 +79,7 @@ input{
     font-size: 14px;
 }
 .forget:hover{
- text-decoration: underline;
+ text-decoration: none;
 }
 hr{
  margin: 25px 0;
@@ -95,7 +95,7 @@ hr{
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    background: #42b72a;
+    background:#0c0c0c ;
     cursor: pointer;
 }
 /******FORGOT THE PASSWORD *******/
