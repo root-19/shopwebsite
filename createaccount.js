@@ -16,10 +16,10 @@ const makePostRequest = async (data, endpoint, callback) => {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  const btnCreate = document.getElementById('btnCreate');
+  const btnCreate = document.getElementById('btnLogin');
 
   btnCreate.addEventListener('click', async function() {
-      const form = document.getElementById('registrationForm');
+      const form = document.getElementById('login');
       const username = form.username.value;
       const name = form.name.value;
       const lastname = form.lastname.value;
