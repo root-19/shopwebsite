@@ -48,14 +48,14 @@ input{
     color: rgb(10, 9, 9);
     margin-top: 13px;
 }
-/**.fa-eye{
+.fa-eye{
     margin-left: 280px;
     margin-bottom: -800px;
     cursor: pointer;
     font-size: 30px;
     color: aqua;
 }
-**/
+
 #btnLogin{
     width: 98%;
     display: block;
@@ -66,7 +66,7 @@ input{
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    background: #1877f2;
+    background:#131414 ;
     cursor: pointer;
     text-decoration-line: none;
 }
