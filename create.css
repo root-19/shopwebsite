@@ -27,7 +27,7 @@ body{
     font-weight: normal;
     margin: 0;
 }
-#registrationForm{
+#login{
     width: 380px;
     height: 350px;
     margin:30px auto;
@@ -56,7 +56,7 @@ input{
     color: aqua;
 }
 
-#btnCreate{
+#btnLogin{
     width: 98%;
     display: block;
     margin-top: 15px;
@@ -107,7 +107,7 @@ hr{
     padding: 15px;
 }
 /*******CREATE ACCOUNT**********/
-#create{
+#registrationForm{
     width: 380px;
     height: 350px;
     margin:30px auto;
@@ -127,7 +127,7 @@ hr{
     width: 330px;
     margin: 30px auto;
    }
-   #create{
+   #registrationForm{
     width: 330px;
     margin: 30px auto;
    }
